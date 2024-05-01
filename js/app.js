@@ -7,6 +7,6 @@
 
 export function eventOnElmts(elmts, event, callback) {
   for(const elmt of elmts) {
-    elmt.addEventListener('event', callback);
+    elmt.addEventListener(event, callback);
   }
 }
