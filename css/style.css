@@ -1,5 +1,5 @@
 :root {
-  /*
+  /* 
     COLOR
   */
   --primary: #b5a1e5;
@@ -25,9 +25,8 @@
   --white-alpha-4: hsla(0, 0%, 100%, 0.04);
   --white-alpha-8: hsla(0, 0%, 100%, 0.08);
   --black-alpha-10: hsla(0, 0%, 0%, 0.1);
- 
- 
-  /*
+
+  /* 
     GRADIENT
   */
   --gradient-1: linear-gradient(
@@ -42,14 +41,12 @@
     hsla(260, 5%, 12%, 0.8) 65%,
     hsl(260, 5%, 12%) 100%
   );
- 
- 
-  /*
+
+  /* 
     TYPOGRAPHY
   */
   --ff-nunito-sans: 'Nunito Sans', sans-serif;
- 
- 
+
   --heading: 5.6rem;
   --title-1: 2rem;
   --title-2: 1.8rem;
@@ -59,20 +56,17 @@
   --body-3: 1.6rem;
   --label-1: 1.4rem;
   --label-2: 1.2rem;
- 
- 
+
   --weight-regular: 400;
   --weight-semiBold: 600;
- 
- 
-  /*
+
+  /* 
     SHADOW
   */
   --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
   --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
- 
- 
-  /*
+
+  /* 
     BORDER RADIUS
   */
   --radius-28: 28px;
@@ -81,142 +75,132 @@
   --radius-4: 4px;
   --radius-pill: 500px;
   --radius-circle: 50%;
- 
- 
-  /*
+
+  /* 
     TRANSITOIN
   */
   --transition-short: 100ms ease;
- }
- 
- 
- /*-----------------------------------*\
+}
+
+/*-----------------------------------*\
   #RESET
- \*-----------------------------------*/
- *,
- *::before,
- *::after {
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
- 
- 
- li {
+}
+
+li {
   list-style: none;
- }
- 
- 
- a,
- img,
- span,
- input,
- button {
+}
+
+a,
+img,
+span,
+input,
+button {
   display: block;
- }
- 
- 
- a {
+}
+
+a {
   color: inherit;
   text-decoration: none;
- }
- 
- 
- img {
+}
+
+img {
   height: auto;
- }
- 
- 
- input,
- button {
+}
+
+input,
+button {
   background: none;
   border: none;
   color:inherit;
   font:inherit;
- }
- 
- 
- input{
+}
+
+input{
   width:100%;
- }
- 
- 
- button{
+}
+
+button{
   cursor: pointer;
- }
- 
- 
- sub{
+}
+
+sub{
   vertical-align: baseline;
- }
- 
- 
- sup{
+}
+
+sup{
   vertical-align: top;
- }
- 
- 
- sub, sup{
+}
+
+sub, sup{
   font-size:.75em;
- }
- 
- 
- html{
+}
+
+html{
   font-family: var(--ff-nunito-sans);
   font-size:10px;
   scroll-behavior: smooth;
- }
- 
- 
- body{
+}
+
+body{
   background-color: var(--background);
   color:var(--on-background);
   font-size:var(--body-3);
   overflow:hidden;
- }
- 
- 
- :focus-visible{
+}
+
+:focus-visible{
   outline: 2px solid var(--white);
   outline-offset: 2px;
- }
- 
- 
- ::selection{
+}
+
+::selection{
   background-color:var(--white-alpha-8);
- }
- 
- 
- ::-webkit-scrollbar{
+}
+
+::-webkit-scrollbar{
   width:6px;
   height:6px; /* horizontal scroll */
- }
- 
- 
- ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb{
   background-color:var(--white-alpha-8);
   border-radius: var(--radius-pill);
- }
- 
- 
- /*-----------------------------------*\
+}
+
+/*-----------------------------------*\
   #MATERIAL ICON
- \*-----------------------------------*/
- @font-face{
+\*-----------------------------------*/
+@font-face{
   font-family: 'Material Symbols Rounded';
   font-style: normal;
   font-weight: 400;
   src: url(../font/material-symbol-rounded.woff2) format('woff2');
- }
+}
 
 /*-----------------------------------*\
   #COMMON ELEMENT
 \*-----------------------------------*/
- .section {
-  margin-bottom: 16px;
- }
+.section{
+  margin-bottom:16px;
+}
 
- .m-icon{
+.container{
+  width:100%;
+  max-width:780px;
+  padding:1rem;
+  margin:auto;
+  border-left:1px solid var(--outline);
+  border-right:1px solid var(--outline);
+}
+
+.m-icon{
   font-family:'Material Symbols Rounded';
   font-weight:normal;
   font-style:normal;
@@ -233,17 +217,6 @@
   width:1em;
   overflow:hidden;
  }
- 
- 
- .container{
-  max-width:780px;
-  width:100%;
-  margin: auto;
-  padding:1rem;
-  border-left:1px solid var(--outline);
-  border-right:1px solid var(--outline);
- }
- 
  
  .icon-btn{
   background-color:var(--white-alpha-8);
@@ -279,7 +252,6 @@
   transition: var(--transition-short);
  }
  
- 
  .has-state:hover::before{
   background-color:var(--white-alpha-4);
  }
@@ -305,7 +277,7 @@
   max-width: max-content;
   display:flex;
   align-items: center;
-  padding-inline:16px; /* inline : 좌우, block : 위아래 */
+  padding-inline:16px; /* inline: 좌우, block: 위아래 */
   border-radius:var(--radius-pill);
   gap:.5rem;
  }
@@ -361,6 +333,7 @@
  .title-2{
   font-size:var(--title-2);
   margin-block-end: 12px;
+  /* margin inline reference: https://www.w3schools.com/cssref/css_pr_padding-inline.php */
  }
  
  
@@ -399,333 +372,326 @@
   #HEADER
 \*-----------------------------------*/
 .search-view{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: var(--surface);
-  color: var(--on-surface);
-  z-index: 999;
-  /* https://bennettfeely.com/clippy/ */
-  /* calc는 단위가 다른 숫자를 연산해주는 것 */
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100vh;
+  background:var(--surface);
+  color:var(--on-surface);
+  z-index:999;
   clip-path: circle(4% at calc(100% - 102px) 5%);
-  opacity: 0;
+  opacity:0;
   visibility: hidden;
   transition: all 0.5s ease;
 }
 
 .search-view.active{
-  opacity: 1;
+  opacity:1;
   visibility: visible;
   clip-path: circle(130% at 73% 5%);
 }
 
-
 .search-wrapper{
-  position: relative;
-  border-bottom: 1px solid var(--outline);
+  position:relative;
+  border-bottom:1px solid var(--outline);
 }
 
 .search-wrapper::before{
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 16px;;
-  border: 3px solid var(--on-surface);
-  top: 50%;
-  transform: translateY(-50%);
-  border-top-color: transparent;
+  content:"";
+  position:absolute;
+  width:24px;
+  height:24px;
+  right:16px;
+  border:3px solid var(--on-surface);
+  top:50%;
+  transform:translateY(-50%);
+  border-top-color:transparent;
   border-radius: var(--radius-circle);
   animation: loading 0.8s linear infinite;
-  display: none;
+  display:none;
 }
 
 @keyframes loading {
   0%{
-    transform: translateY(-50%) rotate(0deg);
+    transform:translateY(-50%) rotate(0deg);
   }
-
   100%{
-    transform: translateY(-50%) rotate(360deg);
+    transform:translateY(-50%) rotate(360deg);
   }
 }
 
-/* search-wrapper의 자식 태그 중에서 searching 이라는 클래스를 가질 때 before의 속성 변화 */
+/* search-wrapper의 자식 태그 중에서 searcing 이라는 클래스를 가질때 before의 속성 변화 */
 .search-wrapper:has(.searching)::before{
-  display: block;
+  display:block;
 }
 
 .search-wrapper > .m-icon{
-  display: none;
+  display:none;
 }
 
-.search-wrapper .search-field {
-  height: 80px;
-  line-height: 80px;
-  padding-inline: 56px 16px;
-  outline: none;
+.search-wrapper .search-field{
+  height:80px;
+  line-height:80px;
+  padding-inline:56px 16px;
+  outline:none;
 }
 
 .search-wrapper .icon-btn{
-  background: transparent;
-  box-shadow: none;
+  background:transparent;
+  box-shadow:none;
 }
 
 .search-wrapper .leading-icon{
-  position: absolute;
-  top: 50%;
-  left: 28px;
-  transform: translate(-50%, -50%);
+  position:absolute;
+  top:50%;
+  left:28px;
+  transform:translate(-50%, -50%);
 }
 
 .search-view .view-list{
-  padding: 8px 0 16px;
+  padding:8px 0 16px;
 }
 
 .search-view .view-item{
-  position: relative;
-  height: 56px;
-  display: flex;
+  position:relative;
+  height:56px;
+  display:flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 16px;
-  padding-inline: 16px 24px;
+  gap:16px;
+  padding-inline:16px 24px;
 }
- 
+
 .search-view .view-item .item-link{
-  position: absolute;
-  inset: 0;
+  position:absolute;
+  inset:0;
   box-shadow: none;
 }
 
 .header .btn-primary{
-  padding-inline: 12px;
+  padding-inline:12px;
 }
 
 .header .container,
 .header .container .header-actions{
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap:1rem;
 }
 
 .logo img{
-  width: 150px;
+  width:150px;
 }
 
- /*-----------------------------------*\
+/*-----------------------------------*\
   #MAIN
- \*-----------------------------------*/
- main{
-  height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
+\*-----------------------------------*/
+main{
+  height:calc(100vh - 80px);
+  height:calc(100svh - 80px);
   /* svh 참조 : https://abcdqbbq.tistory.com/104 */
   overflow:hidden;
- }
+}
 
- article.container{
-  position: relative;
-  height: 100%;
+article.container{
+  position:relative;
+  height:100%;
   overflow-y: auto;
   overflow-y: overlay;
-  display: grid;
+  display:grid;
   grid-template-columns: minmax(0, 1fr);
   gap:20px;
- }
+}
 
- article.container::before{
+article.container::before{
   /* content:"";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:40px;
   background-image: var(--gradient-1);
-  z-index: 1; */
- }
+  z-index:1; */
+}
 
- /*-----------------------------------*\
+/*-----------------------------------*\
   #CURRENT WEATHER
- \*-----------------------------------*/
-.current-weather-card .wrapper {
-  display: flex;
+\*-----------------------------------*/
+.current-weather-card .wrapper{
+  display:flex;
   gap: 8px;
   align-items: center;
-  margin: 12px 0;
+  margin:12px 0;
 }
 
-.current-weather-card .weather-icon {
- margin: auto;
+.current-weather-card .weather-icon{
+  margin:auto;
 }
 
-.current-weather-card .meta-list {
-  border-top: 1px solid var(--outline);
-  margin-top: 16px;
-  padding-top: 16px;
-  display: flex;
+.current-weather-card .meta-list{
+  border-top:1px solid var(--outline);
+  margin-top:16px;
+  padding-top:16px;
+  display:flex;
   flex-direction: column;
-  gap: 12px;
+  gap:12px;
 }
 
-.current-weather-card .meta-item {
-  display: flex;
-  gap: 8px;
+.current-weather-card .meta-item{
+  display:flex;
+  gap:8px;
   align-items: center;
 }
 
-/* .current-weather-card .meta-item:not(:last-child) {
-  margin-bottom: 12px;
+/* .current-weather-card .meta-item:not(:last-child){
+  margin-bottom:12px;
 } */
 
 .current-weather-card .meta-text{
-  color:var(--on-surface-variant);
+  color:var(--on-surface-variant)
 }
 
- /*-----------------------------------*\
+/*-----------------------------------*\
   #FORECAST
- \*-----------------------------------*/
- .forecast-card .title-2{
-  margin-block-end: 0;
- }
+\*-----------------------------------*/
+.forecast-card .title-2{
+  margin-block-end:0;
+}
 
- .forecast-card :is(.card-item, .icon-wrapper){/* .forecast-card의 자식 중에서 .card-item, .icon-wrapper가 있을 경우 모두 같은 속성 적용 */
-  display: flex;
+.forecast-card :is(.card-item, .icon-wrapper){/* .forecast-card의 자식 중에서 .card-item, .icon-wrapper가 있을 경우 모두 같은 속성 적용 */
+  display:flex;
   align-items: center;
 }
 
-.forecast-card .icon-wrapper {
-gap: 8px;
+.forecast-card .icon-wrapper{
+  gap:8px;
 }
 
 .forecast-card .icon-wrapper .weather-icon{
-  width: 36px;
+  width:36px;
 }
 
-.forecast-card .card-item:not(:last-child) {
-  margin-bottom: 12px;
+.forecast-card .card-item:not(:last-child){
+  margin-bottom:12px;
 }
 
-
-.forecast-card .card-item > .label-1 {
-  width: 100%;
+.forecast-card .card-item > .label-1{
+  width:100%;
   text-align: right;
   color:var(--on-surface-variant);
-  font-weight: var(--weight-semiBold);
+  font-weight:var(--weight-semiBold);
 }
 
- /*-----------------------------------*\
+/*-----------------------------------*\
   #HIGHLIGHTS
- \*-----------------------------------*/
+\*-----------------------------------*/
 .highlights .m-icon{
-  font-size: 3.2rem;
+  font-size:3.2rem;
 }
 
 .highlights .highlight-list .title-3{
-  color: var(--on-surface-variant);
-  margin-bottom: 20px;
+  color:var(--on-surface-variant);
+  margin-bottom:20px;
 }
 
 .highlights .card-sm{
-  background: var(--black-alpha-10);
-  position: relative;
-  margin-bottom: 20px;
+  background:var(--black-alpha-10);
+  position:relative;
+  margin-bottom:20px;
 }
 
 .highlights .card-sm:last-child{
-  margin-bottom: 0;
+  margin-bottom:0;
 }
 
 .highlights .highlight-card :is(.wrapper, .card-list, .card-item){
-  display: flex;
+  display:flex;
   align-items: center;
 }
 
 .highlights .wrapper{
   justify-content: space-between;
-  gap:16px
+  gap:16px;
 }
 
 .highlights .card-list{
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .highlights .card-item{
-  width: 50%;
+  width:50%;
   justify-content: flex-end;
-  gap: 4px;
+  gap:4px;
 }
 
 .highlights .label-1{
-  color: var(--on-surface-variant);
+  color:var(--on-surface-variant);
 }
 
 .highlights .badge{
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 2px 12px;
+  position:absolute;
+  top:16px;
+  right:16px;
+  padding:2px 12px;
   border-radius: var(--radius-pill);
-  font-weight: var(--weight-semiBold);
-  cursor: help;
+  font-weight:var(--weight-semiBold);
+  cursor:help;
 }
 
-.highlights .aqi-1{
-  background: var(--bg-aqi-1);
-  color: var(--on-bg-aqi-1)
+.highlights .badge.aqi-1{
+  background:var(--bg-aqi-1);
+  color:var(--on-bg-aqi-1);
 }
 
-.highlights .aqi-2{
-  background: var(--bg-aqi-2);
-  color: var(--on-bg-aqi-2)
+.highlights .badge.aqi-2{
+  background:var(--bg-aqi-2);
+  color:var(--on-bg-aqi-2);
 }
 
-.highlights .aqi-3{
-  background: var(--bg-aqi-3);
-  color: var(--on-bg-aqi-3)
+.highlights .badge.aqi-3{
+  background:var(--bg-aqi-3);
+  color:var(--on-bg-aqi-3);
 }
 
-.highlights .aqi-4{
-  background: var(--bg-aqi-4);
-  color: var(--on-bg-aqi-4)
+.highlights .badge.aqi-4{
+  background:var(--bg-aqi-4);
+  color:var(--on-bg-aqi-4);
 }
 
-.highlights .aqi-5{
-  background: var(--bg-aqi-5);
-  color: var(--on-bg-aqi-5)
+.highlights .badge.aqi-5{
+  background:var(--bg-aqi-5);
+  color:var(--on-bg-aqi-5);
 }
 
 .highlight-card.two .card-item{
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   gap: 8px 16px;
 }
 
 .highlight-card.two .label-1{
-  margin-bottom: 4px;
+  margin-bottom:4px;
 }
 
 /*-----------------------------------*\
   #HOURLY FORECAST
 \*-----------------------------------*/
 .slider-container{
-  overflow-x: auto;
-
+  overflow-x:auto;
 }
 
 .slider-list{
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
+  display:flex;
+  gap:12px;
+  margin-bottom:12px;
 }
 
 .slider-item{
-  min-width: 110px;
-  /* 밑 두개의 코드가 같은 작용을 함 */
+  min-width:110px;
   /* flex: 1 1 100%; */
-  flex-shrink:0;
+  flex-shrink: 0;
 }
 
 .slider-card{
@@ -733,27 +699,26 @@ gap: 8px;
 }
 
 .slider-card .weather-icon{
-  margin: 12px auto;
+  margin:12px auto;
 }
 
- /*-----------------------------------*\
+/*-----------------------------------*\
   #FOOTER
- \*-----------------------------------*/
+\*-----------------------------------*/
 .footer, .footer .body-3:last-child{
-  display: flex;
-  flex-wrap: wrap;
+  display:flex;
+  flex-wrap:wrap;
   justify-content: center;
   align-items: center;
 }
 
-.footer {
-  color: var(--on-surface-variant);
+.footer{
+  color:var(--on-surface-variant);
   text-align: center;
-  gap: 12px 24px;
-  margin: 28px 0;
+  gap:12px 24px;
+  margin:28px 0;
 }
 
 .footer .body-3:last-child{
-  gap: 6px;
+  gap:6px;
 }
-
