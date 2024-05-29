@@ -722,3 +722,45 @@ article.container::before{
 .footer .body-3:last-child{
   gap:6px;
 }
+
+/*-----------------------------------*\
+#LOADING
+\*-----------------------------------*/
+/* static : 위치 고정, top,left,right 이런것 안됨 */
+/* fixed : 절댓값 */ 
+.loading {
+  position:fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GPT */
+/* .spinner {
+  width: 70px;
+  height: 70px;
+  border: 5px solid white;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+} */
+
+.loading::before{
+  content: "";
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--on-background);
+  border-top-color:transparent;
+  border-radius: 100%;
+  animation: loading 1s linear infinite;
+}

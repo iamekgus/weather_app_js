@@ -73,6 +73,7 @@ const currentLocationBtn = document.querySelector(
   '[data-current-location-btn]'
 );
 const container = document.querySelector('[data-container]');
+const loading = document.querySelector('[data-loading]');
 
 /**
  * Render All Weather Data which is fetched from API
@@ -90,6 +91,8 @@ export const updateWeather = function (lat, lon) {
   } else {
     currentLocationBtn.removeAttribute('disabled');
   }
+
+  loading.style.display = 'flex';
 
   const currentWeatherSection = document.querySelector(
     '[data-current-weather]'
@@ -120,13 +123,15 @@ export const updateWeather = function (lat, lon) {
     const card = document.createElement('div');
     card.classList.add('card', 'card-lg', 'current-weather-card');
 
+    console.log(icon);
+
     card.innerHTML = `
       <h2 class="title-2 card-title">Now</h2>
       <div class="wrapper">
         <p class="heading">
           ${parseInt(temp)}&deg;<sup>c</sup>
         </p>
-        <img src="images/weather_icons/${icon}.png" alt="Overcast Clouds" class="weather-icon">
+        <img src="./images/weather_icons/${icon}.png" alt="Overcast Clouds" class="weather-icon">
       </div>
 
       <p class="body-3">${description}</p>
@@ -216,7 +221,7 @@ export const updateWeather = function (lat, lon) {
        tempList.innerHTML = `
          <div class="card card-sm slider-card">
            <p class="body-3">${module.getHours(dateTimeUnix, timezone)}</p>
-           <img src="./assets/images/weather_icons/${icon}.png" width="48" height="48" loading="lazy" alt="${description}" class="weather-icon" title="${description}">
+           <img src="./images/weather_icons/${icon}.png" width="48" height="48" loading="lazy" alt="${description}" class="weather-icon" title="${description}">
            <p class="body-3">${parseInt(temp)}&deg;</p>
          </div>
        `;
@@ -350,6 +355,8 @@ export const updateWeather = function (lat, lon) {
       highlightSection.appendChild(card);
  
     });
+
+    loading.style.display ='none';
   });
 };
 
